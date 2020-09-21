@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+
+##################
+#  MQTT 配置，
+##################
+mqtt:
+  # 用户名
+  username: root
+  # 密码
+  password: 123456
+  # 推送信息的连接地址，如果有多个，用逗号隔开
+  url: tcp://localhost:1883
+  ##################
+  #  MQTT 生产者
+  ##################
+  producer:
+    # 连接服务器默认客户端ID
+    clientId: mqttProducer
+    # 默认的推送主题，实际可在调用接口时指定
+    defaultTopic: mqttTopic
+  ##################
+  #  MQTT 消费者
+  ##################
+  consumer:
+    # 连接服务器默认客户端ID
+    clientId: mqttConsumer
+    # 默认的接收主题，可以订阅多个Topic，逗号分隔
+    defaultTopic: mqttTopic
